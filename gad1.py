@@ -44,7 +44,7 @@ ageNet=cv2.dnn.readNet(ageModel,ageProto)
 genderNet=cv2.dnn.readNet(genderModel,genderProto)
 
 def show(image):
-	video=cv2.VideoCapture(image)
+	video=cv2.VideoCapture('faces/'+image)
 	padding=20
 	
 	hasFrame,frame=video.read()

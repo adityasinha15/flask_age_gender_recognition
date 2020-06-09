@@ -21,18 +21,15 @@ body { position: absolute; }
 	<h1>Age and gender recognition</h1>
 
      <!-- Main Input For Receiving Query to our ML -->
-    <form action="{{ url_for('predict')}}"method="post">
-    	<input type="file" name="image">
+    <form action="{{ url_for('predict')}}"method="post" enctype="multipart/form-data">
+    	<input type="file" name="file" required> 
         <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
     </form>
     <h3>OR</h3>
     <form action="{{url_for('capture')}}" method="POST">
-    <button type="submit"  class="btn btn-primary btn-lg">Capture via web camera</button>
+    <button type="submit"  class="btn btn-primary btn-block btn-large">Capture via web camera</button>
   </form>
-    <br>
-
-   <br>
-
+   
   
  </div>
 
